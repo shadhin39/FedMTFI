@@ -45,7 +45,7 @@ FedMTFI_Experiment_Main/
 ├── metrics_logger.py         # Comprehensive metrics tracking
 ├── shap_utils.py             # Feature importance analysis
 ├── plotting_utils.py         # Visualization utilities
-├── FedAvg/                   # Flower-based FedAvg implementation
+├── FedAvg/                  
 │   ├── CIFAR-10/
 │   ├── FMNIST/
 │   └── MNIST/
