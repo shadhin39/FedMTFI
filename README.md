@@ -13,7 +13,7 @@ FedMTFI is a federated learning system that combines:
 ## Key Features
 
 ### Core Architecture
-- ** Cluster-Specific Models**: SimpleCNN, ResNet-like, MobileNet-like, and ResNet18-like architectures, etc.
+- **Cluster-Specific Models**: SimpleCNN, ResNet-like, MobileNet-like, and ResNet18-like architectures, etc.
 - **Adaptive Input Handling**: Supports both grayscale (MNIST, Fashion-MNIST) and RGB (CIFAR-10) datasets
 - **Multi-Teacher Distillation**: Aggregates knowledge from cluster models into a unified student model
 - **Post-hoc Knowledge Distillation**: Final refinement phase using trained cluster models as teachers
