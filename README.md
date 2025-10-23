@@ -212,61 +212,6 @@ CFG.dataset_configs = {
 - **Shard-based**: Data divided into shards, clients receive multiple shards
 - **Heterogeneity Analysis**: Built-in analysis of data distribution patterns
 
-## Evaluation Metrics
-
-### Training Metrics
-- Local training loss and accuracy per client
-- Cluster model training progress
-- Student model distillation metrics
-- Feature alignment losses
-
-### Evaluation Metrics
-- Test accuracy on all supported datasets
-- Cross-dataset generalization performance
-- Cluster-specific model performance
-- Student model final performance
-
-### Timing Metrics
-- Per-round training time
-- Client training time
-- Server distillation time
-- Overall experiment duration
-
-## Output and Visualization
-
-### Metrics Export
-- **Excel Files**: Comprehensive metrics in `federated_learning_results.xlsx`
-- **CSV Files**: Individual experiment results
-- **Real-time Logging**: Detailed console output with progress tracking
-
-### Automated Plots
-- Training progress over rounds
-- Accuracy comparisons across models
-- Loss convergence analysis
-- Client training distribution
-- Feature importance visualizations
-
-
-## Advanced Features
-
-### Feature Importance Integration
-```python
-# Enable SHAP-based feature importance
-CFG.use_captum = True
-
-# Importance-weighted knowledge distillation
-importance_weights = batch_importance_weights(model, inputs, targets)
-loss = importance_weighted_kd_loss(student_logits, teacher_logits, importance_weights, temperature)
-```
-
-### Custom Model Architectures
-```python
-def build_custom_model(cluster_id, dataset_name, num_classes, image_size):
-    # Add custom architecture for specific cluster
-    if cluster_id == 4:  # New cluster
-        return CustomCNN(num_classes, dataset_name)
-    return build_adaptive_model(cluster_id, dataset_name, num_classes, image_size)
-```
 
 ### Non-IID Configuration
 ```python
@@ -289,22 +234,6 @@ The framework enables comprehensive comparison between:
 - **IID vs Non-IID**: Data distribution impact
 
 
-## Performance Considerations
-
-### Memory Optimization
-- Gradient checkpointing for large models
-- Batch size adaptation based on available memory
-- Efficient data loading with appropriate batch sizes
-
-### Computational Efficiency
-- Adaptive pooling for handling different input sizes
-- Channel dimension matching for feature alignment
-- Optimized aggregation algorithms
-
-### Scalability
-- Support for 100+ clients
-- Configurable participation rates
-- Efficient model serialization and communication
 
 ## Troubleshooting
 
