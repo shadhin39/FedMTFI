@@ -88,7 +88,7 @@ pip install openpyxl  # For Excel metrics export
 
 ### Quick Start
 ```bash
-git clone <repository-url>
+git clone https://github.com/shadhin39/FedMTFI.git
 cd FedMTFI_Experiment_Main
 python main.py
 ```
